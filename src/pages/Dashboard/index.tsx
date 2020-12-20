@@ -103,7 +103,7 @@ const Dashboard: React.FC = () => {
 
             <tbody>
               {transactions.map(transaction => (
-                <tr>
+                <tr key={transaction.id}>
                   <td className="title">{transaction.title}</td>
                   <td className={transaction.type}>
                     {transaction.type === 'outcome' && ' - '}
@@ -122,4 +122,3 @@ const Dashboard: React.FC = () => {
 };
 
 export default Dashboard;
-//38:55 do video de desafio
